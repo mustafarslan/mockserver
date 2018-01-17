@@ -7,5 +7,7 @@ user = Blueprint('user', __name__)
 @user.route('/user', methods=['GET','POST'])
 def hello():
     if request.method == 'GET':
-        return UserMediator().hello()
+        return UserMediator().getUser()
+    else:
+        return UserMediator().postUser()
 

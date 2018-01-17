@@ -1,7 +1,10 @@
-from controllers.userController import TEST
+from controllers.userController import UserController
 
 
 class UserMediator(object):
-    def hello(self):
-        str = TEST().test()
-        return str + " Mediator"
+    def getUser(self):
+        return UserController().getUser()
+
+
+    def postUser(self):
+        return UserController().postUser()
